@@ -29,18 +29,18 @@ Public Class Form1
         uranswerTextBox.Text = ""
         questions = 0
         correctAnswer = 0
-        controlset()
+        controlSet()
 
     End Sub
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
-        Controlset()
+        controlSet()
 
     End Sub
 
-    Sub Controlset()
-
+    Sub controlSet()
+        'sub sets intial controls position when sub is started
         studentinfoBox.Enabled = True
         'addButton.Enabled = False
         'subtractButton.Enabled = False
@@ -54,11 +54,49 @@ Public Class Form1
         optionsBox.Enabled = False
         functionGroupBox.Enabled = False
         numbersBox.Enabled = False
+    End Sub
+
+    Sub controlReset()
+
+        If gradeTextBox.Text > 4 Then
+            addButton.Enabled = True
+            subtractButton.Enabled = True
+            multiplyButton.Enabled = True
+            divideButton.Enabled = True
+
+        ElseIf gradeTextBox.Text = 1 Then
+            addButton.Enabled = True
+            subtractButton.Enabled = False
+            multiplyButton.Enabled = False
+            divideButton.Enabled = False
+
+        ElseIf gradeTextBox.Text = 2 Then
+            addButton.Enabled = True
+            subtractButton.Enabled = True
+            multiplyButton.Enabled = False
+            divideButton.Enabled = False
 
 
+        ElseIf gradeTextBox.Text = 3 Then
+            addButton.Enabled = True
+            subtractButton.Enabled = True
+            multiplyButton.Enabled = True
+            divideButton.Enabled = False
 
+
+        End If
+
+        studentinfoBox.Enabled = False
+        firstnumTextBox.Enabled = True
+        secnumBox.Enabled = True
+        uranswerTextBox.Enabled = True
+        submitButton.Enabled = True
+        resultButton.Enabled = True
 
     End Sub
+
+
+
 
 
 End Class
