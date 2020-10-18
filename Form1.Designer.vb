@@ -27,23 +27,29 @@ Partial Class Form1
         Me.ageTextBox = New System.Windows.Forms.TextBox()
         Me.gradeTextBox = New System.Windows.Forms.TextBox()
         Me.studentinfoBox = New System.Windows.Forms.GroupBox()
-        Me.functionGroupBox = New System.Windows.Forms.GroupBox()
-        Me.numbersBox = New System.Windows.Forms.GroupBox()
-        Me.ageLabel = New System.Windows.Forms.Label()
         Me.gradeLabel = New System.Windows.Forms.Label()
-        Me.addButton = New System.Windows.Forms.RadioButton()
-        Me.subtractButton = New System.Windows.Forms.RadioButton()
-        Me.multiplyButton = New System.Windows.Forms.RadioButton()
+        Me.ageLabel = New System.Windows.Forms.Label()
+        Me.functionGroupBox = New System.Windows.Forms.GroupBox()
         Me.divideButton = New System.Windows.Forms.RadioButton()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
-        Me.firstnumLabel = New System.Windows.Forms.Label()
-        Me.secondLabel = New System.Windows.Forms.Label()
+        Me.multiplyButton = New System.Windows.Forms.RadioButton()
+        Me.subtractButton = New System.Windows.Forms.RadioButton()
+        Me.addButton = New System.Windows.Forms.RadioButton()
+        Me.numbersBox = New System.Windows.Forms.GroupBox()
         Me.uranswerLabel = New System.Windows.Forms.Label()
+        Me.secondLabel = New System.Windows.Forms.Label()
+        Me.firstnumLabel = New System.Windows.Forms.Label()
+        Me.TextBox3 = New System.Windows.Forms.TextBox()
+        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.optionsBox = New System.Windows.Forms.GroupBox()
+        Me.exitButton = New System.Windows.Forms.Button()
+        Me.resultButton = New System.Windows.Forms.Button()
+        Me.clearButton = New System.Windows.Forms.Button()
+        Me.submitButton = New System.Windows.Forms.Button()
         Me.studentinfoBox.SuspendLayout()
         Me.functionGroupBox.SuspendLayout()
         Me.numbersBox.SuspendLayout()
+        Me.optionsBox.SuspendLayout()
         Me.SuspendLayout()
         '
         'nameTextBox
@@ -51,13 +57,14 @@ Partial Class Form1
         Me.nameTextBox.Location = New System.Drawing.Point(6, 73)
         Me.nameTextBox.Multiline = True
         Me.nameTextBox.Name = "nameTextBox"
-        Me.nameTextBox.Size = New System.Drawing.Size(304, 42)
+        Me.nameTextBox.Size = New System.Drawing.Size(349, 42)
         Me.nameTextBox.TabIndex = 0
         '
         'nameLabel
         '
         Me.nameLabel.AutoSize = True
         Me.nameLabel.BackColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.nameLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.nameLabel.ForeColor = System.Drawing.SystemColors.ButtonHighlight
         Me.nameLabel.Location = New System.Drawing.Point(6, 41)
         Me.nameLabel.Name = "nameLabel"
@@ -67,7 +74,7 @@ Partial Class Form1
         '
         'ageTextBox
         '
-        Me.ageTextBox.Location = New System.Drawing.Point(316, 73)
+        Me.ageTextBox.Location = New System.Drawing.Point(380, 73)
         Me.ageTextBox.Multiline = True
         Me.ageTextBox.Name = "ageTextBox"
         Me.ageTextBox.Size = New System.Drawing.Size(91, 42)
@@ -75,7 +82,7 @@ Partial Class Form1
         '
         'gradeTextBox
         '
-        Me.gradeTextBox.Location = New System.Drawing.Point(413, 73)
+        Me.gradeTextBox.Location = New System.Drawing.Point(492, 73)
         Me.gradeTextBox.Multiline = True
         Me.gradeTextBox.Name = "gradeTextBox"
         Me.gradeTextBox.Size = New System.Drawing.Size(91, 42)
@@ -89,12 +96,37 @@ Partial Class Form1
         Me.studentinfoBox.Controls.Add(Me.nameLabel)
         Me.studentinfoBox.Controls.Add(Me.ageTextBox)
         Me.studentinfoBox.Controls.Add(Me.nameTextBox)
+        Me.studentinfoBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.studentinfoBox.Location = New System.Drawing.Point(12, 12)
         Me.studentinfoBox.Name = "studentinfoBox"
-        Me.studentinfoBox.Size = New System.Drawing.Size(542, 169)
+        Me.studentinfoBox.Size = New System.Drawing.Size(609, 169)
         Me.studentinfoBox.TabIndex = 4
         Me.studentinfoBox.TabStop = False
         Me.studentinfoBox.Text = "Student Info."
+        '
+        'gradeLabel
+        '
+        Me.gradeLabel.AutoSize = True
+        Me.gradeLabel.BackColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.gradeLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.gradeLabel.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.gradeLabel.Location = New System.Drawing.Point(488, 41)
+        Me.gradeLabel.Name = "gradeLabel"
+        Me.gradeLabel.Size = New System.Drawing.Size(54, 20)
+        Me.gradeLabel.TabIndex = 5
+        Me.gradeLabel.Text = "Grade"
+        '
+        'ageLabel
+        '
+        Me.ageLabel.AutoSize = True
+        Me.ageLabel.BackColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.ageLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ageLabel.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.ageLabel.Location = New System.Drawing.Point(376, 41)
+        Me.ageLabel.Name = "ageLabel"
+        Me.ageLabel.Size = New System.Drawing.Size(38, 20)
+        Me.ageLabel.TabIndex = 4
+        Me.ageLabel.Text = "Age"
         '
         'functionGroupBox
         '
@@ -102,12 +134,61 @@ Partial Class Form1
         Me.functionGroupBox.Controls.Add(Me.multiplyButton)
         Me.functionGroupBox.Controls.Add(Me.subtractButton)
         Me.functionGroupBox.Controls.Add(Me.addButton)
+        Me.functionGroupBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.functionGroupBox.Location = New System.Drawing.Point(12, 205)
         Me.functionGroupBox.Name = "functionGroupBox"
-        Me.functionGroupBox.Size = New System.Drawing.Size(168, 242)
+        Me.functionGroupBox.Size = New System.Drawing.Size(184, 242)
         Me.functionGroupBox.TabIndex = 5
         Me.functionGroupBox.TabStop = False
         Me.functionGroupBox.Text = "Function Select"
+        '
+        'divideButton
+        '
+        Me.divideButton.AutoSize = True
+        Me.divideButton.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.divideButton.Location = New System.Drawing.Point(48, 190)
+        Me.divideButton.Name = "divideButton"
+        Me.divideButton.Size = New System.Drawing.Size(77, 24)
+        Me.divideButton.TabIndex = 3
+        Me.divideButton.TabStop = True
+        Me.divideButton.Text = "Divide"
+        Me.divideButton.UseVisualStyleBackColor = True
+        '
+        'multiplyButton
+        '
+        Me.multiplyButton.AutoSize = True
+        Me.multiplyButton.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.multiplyButton.Location = New System.Drawing.Point(48, 160)
+        Me.multiplyButton.Name = "multiplyButton"
+        Me.multiplyButton.Size = New System.Drawing.Size(86, 24)
+        Me.multiplyButton.TabIndex = 2
+        Me.multiplyButton.TabStop = True
+        Me.multiplyButton.Text = "Multiply"
+        Me.multiplyButton.UseVisualStyleBackColor = True
+        '
+        'subtractButton
+        '
+        Me.subtractButton.AutoSize = True
+        Me.subtractButton.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.subtractButton.Location = New System.Drawing.Point(48, 93)
+        Me.subtractButton.Name = "subtractButton"
+        Me.subtractButton.Size = New System.Drawing.Size(95, 24)
+        Me.subtractButton.TabIndex = 1
+        Me.subtractButton.TabStop = True
+        Me.subtractButton.Text = "Subtract"
+        Me.subtractButton.UseVisualStyleBackColor = True
+        '
+        'addButton
+        '
+        Me.addButton.AutoSize = True
+        Me.addButton.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.addButton.Location = New System.Drawing.Point(48, 63)
+        Me.addButton.Name = "addButton"
+        Me.addButton.Size = New System.Drawing.Size(63, 24)
+        Me.addButton.TabIndex = 0
+        Me.addButton.TabStop = True
+        Me.addButton.Text = "Add"
+        Me.addButton.UseVisualStyleBackColor = True
         '
         'numbersBox
         '
@@ -117,141 +198,138 @@ Partial Class Form1
         Me.numbersBox.Controls.Add(Me.TextBox3)
         Me.numbersBox.Controls.Add(Me.TextBox2)
         Me.numbersBox.Controls.Add(Me.TextBox1)
-        Me.numbersBox.Location = New System.Drawing.Point(199, 205)
+        Me.numbersBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.numbersBox.Location = New System.Drawing.Point(214, 205)
         Me.numbersBox.Name = "numbersBox"
-        Me.numbersBox.Size = New System.Drawing.Size(355, 242)
+        Me.numbersBox.Size = New System.Drawing.Size(407, 242)
         Me.numbersBox.TabIndex = 6
         Me.numbersBox.TabStop = False
         Me.numbersBox.Text = "Number Input"
-        '
-        'ageLabel
-        '
-        Me.ageLabel.AutoSize = True
-        Me.ageLabel.BackColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.ageLabel.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.ageLabel.Location = New System.Drawing.Point(312, 41)
-        Me.ageLabel.Name = "ageLabel"
-        Me.ageLabel.Size = New System.Drawing.Size(38, 20)
-        Me.ageLabel.TabIndex = 4
-        Me.ageLabel.Text = "Age"
-        '
-        'gradeLabel
-        '
-        Me.gradeLabel.AutoSize = True
-        Me.gradeLabel.BackColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.gradeLabel.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.gradeLabel.Location = New System.Drawing.Point(409, 41)
-        Me.gradeLabel.Name = "gradeLabel"
-        Me.gradeLabel.Size = New System.Drawing.Size(54, 20)
-        Me.gradeLabel.TabIndex = 5
-        Me.gradeLabel.Text = "Grade"
-        '
-        'addButton
-        '
-        Me.addButton.AutoSize = True
-        Me.addButton.Location = New System.Drawing.Point(48, 41)
-        Me.addButton.Name = "addButton"
-        Me.addButton.Size = New System.Drawing.Size(63, 24)
-        Me.addButton.TabIndex = 0
-        Me.addButton.TabStop = True
-        Me.addButton.Text = "Add"
-        Me.addButton.UseVisualStyleBackColor = True
-        '
-        'subtractButton
-        '
-        Me.subtractButton.AutoSize = True
-        Me.subtractButton.Location = New System.Drawing.Point(48, 91)
-        Me.subtractButton.Name = "subtractButton"
-        Me.subtractButton.Size = New System.Drawing.Size(95, 24)
-        Me.subtractButton.TabIndex = 1
-        Me.subtractButton.TabStop = True
-        Me.subtractButton.Text = "Subtract"
-        Me.subtractButton.UseVisualStyleBackColor = True
-        '
-        'multiplyButton
-        '
-        Me.multiplyButton.AutoSize = True
-        Me.multiplyButton.Location = New System.Drawing.Point(48, 146)
-        Me.multiplyButton.Name = "multiplyButton"
-        Me.multiplyButton.Size = New System.Drawing.Size(86, 24)
-        Me.multiplyButton.TabIndex = 2
-        Me.multiplyButton.TabStop = True
-        Me.multiplyButton.Text = "Multiply"
-        Me.multiplyButton.UseVisualStyleBackColor = True
-        '
-        'divideButton
-        '
-        Me.divideButton.AutoSize = True
-        Me.divideButton.Location = New System.Drawing.Point(48, 199)
-        Me.divideButton.Name = "divideButton"
-        Me.divideButton.Size = New System.Drawing.Size(77, 24)
-        Me.divideButton.TabIndex = 3
-        Me.divideButton.TabStop = True
-        Me.divideButton.Text = "Divide"
-        Me.divideButton.UseVisualStyleBackColor = True
-        '
-        'TextBox1
-        '
-        Me.TextBox1.Location = New System.Drawing.Point(149, 40)
-        Me.TextBox1.Multiline = True
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(190, 41)
-        Me.TextBox1.TabIndex = 0
-        '
-        'TextBox2
-        '
-        Me.TextBox2.Location = New System.Drawing.Point(149, 108)
-        Me.TextBox2.Multiline = True
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(190, 41)
-        Me.TextBox2.TabIndex = 1
-        '
-        'TextBox3
-        '
-        Me.TextBox3.Location = New System.Drawing.Point(149, 175)
-        Me.TextBox3.Multiline = True
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(190, 39)
-        Me.TextBox3.TabIndex = 2
-        '
-        'firstnumLabel
-        '
-        Me.firstnumLabel.AutoSize = True
-        Me.firstnumLabel.BackColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.firstnumLabel.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.firstnumLabel.Location = New System.Drawing.Point(30, 56)
-        Me.firstnumLabel.Name = "firstnumLabel"
-        Me.firstnumLabel.Size = New System.Drawing.Size(100, 20)
-        Me.firstnumLabel.TabIndex = 3
-        Me.firstnumLabel.Text = "First Number"
-        '
-        'secondLabel
-        '
-        Me.secondLabel.AutoSize = True
-        Me.secondLabel.BackColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.secondLabel.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.secondLabel.Location = New System.Drawing.Point(6, 111)
-        Me.secondLabel.Name = "secondLabel"
-        Me.secondLabel.Size = New System.Drawing.Size(124, 20)
-        Me.secondLabel.TabIndex = 4
-        Me.secondLabel.Text = "Second Number"
         '
         'uranswerLabel
         '
         Me.uranswerLabel.AutoSize = True
         Me.uranswerLabel.BackColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.uranswerLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.uranswerLabel.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.uranswerLabel.Location = New System.Drawing.Point(30, 178)
+        Me.uranswerLabel.Location = New System.Drawing.Point(39, 194)
         Me.uranswerLabel.Name = "uranswerLabel"
         Me.uranswerLabel.Size = New System.Drawing.Size(100, 20)
         Me.uranswerLabel.TabIndex = 5
         Me.uranswerLabel.Text = "Your Answer"
+        '
+        'secondLabel
+        '
+        Me.secondLabel.AutoSize = True
+        Me.secondLabel.BackColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.secondLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.secondLabel.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.secondLabel.Location = New System.Drawing.Point(15, 121)
+        Me.secondLabel.Name = "secondLabel"
+        Me.secondLabel.Size = New System.Drawing.Size(124, 20)
+        Me.secondLabel.TabIndex = 4
+        Me.secondLabel.Text = "Second Number"
+        '
+        'firstnumLabel
+        '
+        Me.firstnumLabel.AutoSize = True
+        Me.firstnumLabel.BackColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.firstnumLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.firstnumLabel.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.firstnumLabel.Location = New System.Drawing.Point(39, 56)
+        Me.firstnumLabel.Name = "firstnumLabel"
+        Me.firstnumLabel.Size = New System.Drawing.Size(100, 20)
+        Me.firstnumLabel.TabIndex = 3
+        Me.firstnumLabel.Text = "First Number"
+        '
+        'TextBox3
+        '
+        Me.TextBox3.Location = New System.Drawing.Point(178, 184)
+        Me.TextBox3.Multiline = True
+        Me.TextBox3.Name = "TextBox3"
+        Me.TextBox3.Size = New System.Drawing.Size(203, 39)
+        Me.TextBox3.TabIndex = 2
+        '
+        'TextBox2
+        '
+        Me.TextBox2.Location = New System.Drawing.Point(178, 111)
+        Me.TextBox2.Multiline = True
+        Me.TextBox2.Name = "TextBox2"
+        Me.TextBox2.Size = New System.Drawing.Size(203, 41)
+        Me.TextBox2.TabIndex = 1
+        '
+        'TextBox1
+        '
+        Me.TextBox1.Location = New System.Drawing.Point(178, 46)
+        Me.TextBox1.Multiline = True
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(203, 41)
+        Me.TextBox1.TabIndex = 0
+        '
+        'optionsBox
+        '
+        Me.optionsBox.Controls.Add(Me.exitButton)
+        Me.optionsBox.Controls.Add(Me.resultButton)
+        Me.optionsBox.Controls.Add(Me.clearButton)
+        Me.optionsBox.Controls.Add(Me.submitButton)
+        Me.optionsBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.optionsBox.Location = New System.Drawing.Point(637, 12)
+        Me.optionsBox.Name = "optionsBox"
+        Me.optionsBox.Size = New System.Drawing.Size(227, 434)
+        Me.optionsBox.TabIndex = 7
+        Me.optionsBox.TabStop = False
+        Me.optionsBox.Text = "Options"
+        '
+        'exitButton
+        '
+        Me.exitButton.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.exitButton.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.exitButton.Location = New System.Drawing.Point(58, 323)
+        Me.exitButton.Name = "exitButton"
+        Me.exitButton.Size = New System.Drawing.Size(116, 57)
+        Me.exitButton.TabIndex = 3
+        Me.exitButton.Text = "Exit"
+        Me.exitButton.UseVisualStyleBackColor = False
+        '
+        'resultButton
+        '
+        Me.resultButton.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.resultButton.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.resultButton.Location = New System.Drawing.Point(58, 231)
+        Me.resultButton.Name = "resultButton"
+        Me.resultButton.Size = New System.Drawing.Size(116, 57)
+        Me.resultButton.TabIndex = 2
+        Me.resultButton.Text = "Result"
+        Me.resultButton.UseVisualStyleBackColor = False
+        '
+        'clearButton
+        '
+        Me.clearButton.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.clearButton.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.clearButton.Location = New System.Drawing.Point(58, 143)
+        Me.clearButton.Name = "clearButton"
+        Me.clearButton.Size = New System.Drawing.Size(116, 54)
+        Me.clearButton.TabIndex = 1
+        Me.clearButton.Text = "Clear"
+        Me.clearButton.UseVisualStyleBackColor = False
+        '
+        'submitButton
+        '
+        Me.submitButton.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.submitButton.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.submitButton.Location = New System.Drawing.Point(58, 61)
+        Me.submitButton.Name = "submitButton"
+        Me.submitButton.Size = New System.Drawing.Size(116, 51)
+        Me.submitButton.TabIndex = 0
+        Me.submitButton.Text = "Submit"
+        Me.submitButton.UseVisualStyleBackColor = False
         '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(898, 472)
+        Me.Controls.Add(Me.optionsBox)
         Me.Controls.Add(Me.numbersBox)
         Me.Controls.Add(Me.functionGroupBox)
         Me.Controls.Add(Me.studentinfoBox)
@@ -263,6 +341,7 @@ Partial Class Form1
         Me.functionGroupBox.PerformLayout()
         Me.numbersBox.ResumeLayout(False)
         Me.numbersBox.PerformLayout()
+        Me.optionsBox.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
@@ -286,4 +365,9 @@ Partial Class Form1
     Friend WithEvents TextBox3 As TextBox
     Friend WithEvents TextBox2 As TextBox
     Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents optionsBox As GroupBox
+    Friend WithEvents exitButton As Button
+    Friend WithEvents resultButton As Button
+    Friend WithEvents clearButton As Button
+    Friend WithEvents submitButton As Button
 End Class
