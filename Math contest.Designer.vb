@@ -38,9 +38,9 @@ Partial Class Form1
         Me.uranswerLabel = New System.Windows.Forms.Label()
         Me.secondLabel = New System.Windows.Forms.Label()
         Me.firstnumLabel = New System.Windows.Forms.Label()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.uranswerTextBox = New System.Windows.Forms.TextBox()
+        Me.secnumBox = New System.Windows.Forms.TextBox()
+        Me.firstnumTextBox = New System.Windows.Forms.TextBox()
         Me.optionsBox = New System.Windows.Forms.GroupBox()
         Me.exitButton = New System.Windows.Forms.Button()
         Me.resultButton = New System.Windows.Forms.Button()
@@ -195,9 +195,9 @@ Partial Class Form1
         Me.numbersBox.Controls.Add(Me.uranswerLabel)
         Me.numbersBox.Controls.Add(Me.secondLabel)
         Me.numbersBox.Controls.Add(Me.firstnumLabel)
-        Me.numbersBox.Controls.Add(Me.TextBox3)
-        Me.numbersBox.Controls.Add(Me.TextBox2)
-        Me.numbersBox.Controls.Add(Me.TextBox1)
+        Me.numbersBox.Controls.Add(Me.uranswerTextBox)
+        Me.numbersBox.Controls.Add(Me.secnumBox)
+        Me.numbersBox.Controls.Add(Me.firstnumTextBox)
         Me.numbersBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.numbersBox.Location = New System.Drawing.Point(214, 205)
         Me.numbersBox.Name = "numbersBox"
@@ -242,29 +242,29 @@ Partial Class Form1
         Me.firstnumLabel.TabIndex = 3
         Me.firstnumLabel.Text = "First Number"
         '
-        'TextBox3
+        'uranswerTextBox
         '
-        Me.TextBox3.Location = New System.Drawing.Point(178, 184)
-        Me.TextBox3.Multiline = True
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(203, 39)
-        Me.TextBox3.TabIndex = 2
+        Me.uranswerTextBox.Location = New System.Drawing.Point(178, 184)
+        Me.uranswerTextBox.Multiline = True
+        Me.uranswerTextBox.Name = "uranswerTextBox"
+        Me.uranswerTextBox.Size = New System.Drawing.Size(203, 39)
+        Me.uranswerTextBox.TabIndex = 2
         '
-        'TextBox2
+        'secnumBox
         '
-        Me.TextBox2.Location = New System.Drawing.Point(178, 111)
-        Me.TextBox2.Multiline = True
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(203, 41)
-        Me.TextBox2.TabIndex = 1
+        Me.secnumBox.Location = New System.Drawing.Point(178, 111)
+        Me.secnumBox.Multiline = True
+        Me.secnumBox.Name = "secnumBox"
+        Me.secnumBox.Size = New System.Drawing.Size(203, 41)
+        Me.secnumBox.TabIndex = 1
         '
-        'TextBox1
+        'firstnumTextBox
         '
-        Me.TextBox1.Location = New System.Drawing.Point(178, 46)
-        Me.TextBox1.Multiline = True
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(203, 41)
-        Me.TextBox1.TabIndex = 0
+        Me.firstnumTextBox.Location = New System.Drawing.Point(178, 46)
+        Me.firstnumTextBox.Multiline = True
+        Me.firstnumTextBox.Name = "firstnumTextBox"
+        Me.firstnumTextBox.Size = New System.Drawing.Size(203, 41)
+        Me.firstnumTextBox.TabIndex = 0
         '
         'optionsBox
         '
@@ -362,9 +362,9 @@ Partial Class Form1
     Friend WithEvents uranswerLabel As Label
     Friend WithEvents secondLabel As Label
     Friend WithEvents firstnumLabel As Label
-    Friend WithEvents TextBox3 As TextBox
-    Friend WithEvents TextBox2 As TextBox
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents uranswerTextBox As TextBox
+    Friend WithEvents secnumBox As TextBox
+    Friend WithEvents firstnumTextBox As TextBox
     Friend WithEvents optionsBox As GroupBox
     Friend WithEvents exitButton As Button
     Friend WithEvents resultButton As Button
