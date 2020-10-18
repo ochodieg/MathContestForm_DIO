@@ -28,15 +28,22 @@ Partial Class Form1
         Me.gradeTextBox = New System.Windows.Forms.TextBox()
         Me.studentinfoBox = New System.Windows.Forms.GroupBox()
         Me.functionGroupBox = New System.Windows.Forms.GroupBox()
-        Me.GroupBox3 = New System.Windows.Forms.GroupBox()
+        Me.numbersBox = New System.Windows.Forms.GroupBox()
         Me.ageLabel = New System.Windows.Forms.Label()
         Me.gradeLabel = New System.Windows.Forms.Label()
         Me.addButton = New System.Windows.Forms.RadioButton()
         Me.subtractButton = New System.Windows.Forms.RadioButton()
         Me.multiplyButton = New System.Windows.Forms.RadioButton()
         Me.divideButton = New System.Windows.Forms.RadioButton()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.TextBox3 = New System.Windows.Forms.TextBox()
+        Me.firstnumLabel = New System.Windows.Forms.Label()
+        Me.secondLabel = New System.Windows.Forms.Label()
+        Me.uranswerLabel = New System.Windows.Forms.Label()
         Me.studentinfoBox.SuspendLayout()
         Me.functionGroupBox.SuspendLayout()
+        Me.numbersBox.SuspendLayout()
         Me.SuspendLayout()
         '
         'nameTextBox
@@ -95,21 +102,27 @@ Partial Class Form1
         Me.functionGroupBox.Controls.Add(Me.multiplyButton)
         Me.functionGroupBox.Controls.Add(Me.subtractButton)
         Me.functionGroupBox.Controls.Add(Me.addButton)
-        Me.functionGroupBox.Location = New System.Drawing.Point(18, 205)
+        Me.functionGroupBox.Location = New System.Drawing.Point(12, 205)
         Me.functionGroupBox.Name = "functionGroupBox"
-        Me.functionGroupBox.Size = New System.Drawing.Size(212, 242)
+        Me.functionGroupBox.Size = New System.Drawing.Size(168, 242)
         Me.functionGroupBox.TabIndex = 5
         Me.functionGroupBox.TabStop = False
         Me.functionGroupBox.Text = "Function Select"
         '
-        'GroupBox3
+        'numbersBox
         '
-        Me.GroupBox3.Location = New System.Drawing.Point(262, 205)
-        Me.GroupBox3.Name = "GroupBox3"
-        Me.GroupBox3.Size = New System.Drawing.Size(292, 242)
-        Me.GroupBox3.TabIndex = 6
-        Me.GroupBox3.TabStop = False
-        Me.GroupBox3.Text = "GroupBox3"
+        Me.numbersBox.Controls.Add(Me.uranswerLabel)
+        Me.numbersBox.Controls.Add(Me.secondLabel)
+        Me.numbersBox.Controls.Add(Me.firstnumLabel)
+        Me.numbersBox.Controls.Add(Me.TextBox3)
+        Me.numbersBox.Controls.Add(Me.TextBox2)
+        Me.numbersBox.Controls.Add(Me.TextBox1)
+        Me.numbersBox.Location = New System.Drawing.Point(199, 205)
+        Me.numbersBox.Name = "numbersBox"
+        Me.numbersBox.Size = New System.Drawing.Size(355, 242)
+        Me.numbersBox.TabIndex = 6
+        Me.numbersBox.TabStop = False
+        Me.numbersBox.Text = "Number Input"
         '
         'ageLabel
         '
@@ -177,12 +190,69 @@ Partial Class Form1
         Me.divideButton.Text = "Divide"
         Me.divideButton.UseVisualStyleBackColor = True
         '
+        'TextBox1
+        '
+        Me.TextBox1.Location = New System.Drawing.Point(149, 40)
+        Me.TextBox1.Multiline = True
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(190, 41)
+        Me.TextBox1.TabIndex = 0
+        '
+        'TextBox2
+        '
+        Me.TextBox2.Location = New System.Drawing.Point(149, 108)
+        Me.TextBox2.Multiline = True
+        Me.TextBox2.Name = "TextBox2"
+        Me.TextBox2.Size = New System.Drawing.Size(190, 41)
+        Me.TextBox2.TabIndex = 1
+        '
+        'TextBox3
+        '
+        Me.TextBox3.Location = New System.Drawing.Point(149, 175)
+        Me.TextBox3.Multiline = True
+        Me.TextBox3.Name = "TextBox3"
+        Me.TextBox3.Size = New System.Drawing.Size(190, 39)
+        Me.TextBox3.TabIndex = 2
+        '
+        'firstnumLabel
+        '
+        Me.firstnumLabel.AutoSize = True
+        Me.firstnumLabel.BackColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.firstnumLabel.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.firstnumLabel.Location = New System.Drawing.Point(30, 56)
+        Me.firstnumLabel.Name = "firstnumLabel"
+        Me.firstnumLabel.Size = New System.Drawing.Size(100, 20)
+        Me.firstnumLabel.TabIndex = 3
+        Me.firstnumLabel.Text = "First Number"
+        '
+        'secondLabel
+        '
+        Me.secondLabel.AutoSize = True
+        Me.secondLabel.BackColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.secondLabel.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.secondLabel.Location = New System.Drawing.Point(6, 111)
+        Me.secondLabel.Name = "secondLabel"
+        Me.secondLabel.Size = New System.Drawing.Size(124, 20)
+        Me.secondLabel.TabIndex = 4
+        Me.secondLabel.Text = "Second Number"
+        '
+        'uranswerLabel
+        '
+        Me.uranswerLabel.AutoSize = True
+        Me.uranswerLabel.BackColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.uranswerLabel.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.uranswerLabel.Location = New System.Drawing.Point(30, 178)
+        Me.uranswerLabel.Name = "uranswerLabel"
+        Me.uranswerLabel.Size = New System.Drawing.Size(100, 20)
+        Me.uranswerLabel.TabIndex = 5
+        Me.uranswerLabel.Text = "Your Answer"
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(898, 472)
-        Me.Controls.Add(Me.GroupBox3)
+        Me.Controls.Add(Me.numbersBox)
         Me.Controls.Add(Me.functionGroupBox)
         Me.Controls.Add(Me.studentinfoBox)
         Me.Name = "Form1"
@@ -191,6 +261,8 @@ Partial Class Form1
         Me.studentinfoBox.PerformLayout()
         Me.functionGroupBox.ResumeLayout(False)
         Me.functionGroupBox.PerformLayout()
+        Me.numbersBox.ResumeLayout(False)
+        Me.numbersBox.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
@@ -203,9 +275,15 @@ Partial Class Form1
     Friend WithEvents gradeLabel As Label
     Friend WithEvents ageLabel As Label
     Friend WithEvents functionGroupBox As GroupBox
-    Friend WithEvents GroupBox3 As GroupBox
+    Friend WithEvents numbersBox As GroupBox
     Friend WithEvents divideButton As RadioButton
     Friend WithEvents multiplyButton As RadioButton
     Friend WithEvents subtractButton As RadioButton
     Friend WithEvents addButton As RadioButton
+    Friend WithEvents uranswerLabel As Label
+    Friend WithEvents secondLabel As Label
+    Friend WithEvents firstnumLabel As Label
+    Friend WithEvents TextBox3 As TextBox
+    Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents TextBox1 As TextBox
 End Class
