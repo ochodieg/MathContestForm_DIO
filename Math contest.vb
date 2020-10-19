@@ -42,18 +42,18 @@ Public Class Form1
     Sub controlSet()
         'sub sets intial controls position when sub is started
         studentinfoBox.Enabled = True
-        'addButton.Enabled = False
-        'subtractButton.Enabled = False
-        'multiplyButton.Enabled = False
-        'divideButton.Enabled = False
-        'firstnumTextBox.Enabled = False
-        'secnumBox.Enabled = False
-        'uranswerTextBox.Enabled = False
-        'submitButton.Enabled = False
-        'resultButton.Enabled = False
-        optionsBox.Enabled = False
-        functionGroupBox.Enabled = False
-        numbersBox.Enabled = False
+        addButton.Enabled = False
+        subtractButton.Enabled = False
+        multiplyButton.Enabled = False
+        divideButton.Enabled = False
+        firstnumTextBox.Enabled = False
+        secnumBox.Enabled = False
+        uranswerTextBox.Enabled = False
+        submitButton.Enabled = False
+        resultButton.Enabled = False
+        'optionsBox.Enabled = False
+        'functionGroupBox.Enabled = False
+        'numbersBox.Enabled = False
     End Sub
 
     Sub controlReset()
@@ -185,27 +185,28 @@ Public Class Form1
                 ageTextBox.Focus()
                 problem = False
 
-            End If
-
-            If gradeTextBox.Text = "" Then
-                Accumulatemessage("You must enter grade.", False)
-                gradeTextBox.Focus()
-                problem = False
-
-            ElseIf gradeTextBox.Text > 0 And gradeTextBox.Text < 6 Then
-                controlReset()
-
-
-            Else
-                Accumulatemessage("grades 1 to 5 only.", False)
-                gradeTextBox.Focus()
-                problem = False
 
             End If
+
+        If gradeTextBox.Text = "" Then
+            Accumulatemessage("You must enter grade.", False)
+            gradeTextBox.Focus()
+            problem = False
+
+        ElseIf gradeTextBox.Text > 0 And gradeTextBox.Text < 6 Then
+            controlReset()
+
+
+        Else
+            Accumulatemessage("grades 1 to 5 only.", False)
+            gradeTextBox.Focus()
+            problem = False
+
+        End If
 
         Catch ex As Exception
 
-            MsgBox("Numericals only.")
+        MsgBox("Numericals only.")
 
         End Try
 
