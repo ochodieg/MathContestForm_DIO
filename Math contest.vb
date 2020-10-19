@@ -1,5 +1,11 @@
-﻿
-
+﻿Option Strict Off
+Option Explicit On
+Option Compare Text
+'Ivan Ochoa
+'RCET 0265
+'Fall 2020
+'Math Contest Form
+'https://github.com/ochodieg/MathContestForm_DIO
 
 Public Class Form1
     Dim num1 As Integer
