@@ -1,4 +1,4 @@
-﻿Option Strict Off
+﻿Option Strict On 'wont compile with this on - TJR
 Option Explicit On
 Option Compare Text
 'Ivan Ochoa
@@ -7,7 +7,7 @@ Option Compare Text
 'Math Contest Form
 'https://github.com/ochodieg/MathContestForm_DIO
 
-Public Class Form1
+Public Class Form1 'Bad name - TJR
     Dim num1 As Integer
     Dim num2 As Integer
     Dim answer As Integer
@@ -65,7 +65,7 @@ Public Class Form1
     Sub controlReset()
 
         If gradeTextBox.Text > 4 Then
-            addButton.Enabled = True
+            addButton.Enabled = True 'enable all or none - TJR
             subtractButton.Enabled = True
             multiplyButton.Enabled = True
             divideButton.Enabled = True
@@ -104,7 +104,7 @@ Public Class Form1
     Private Sub submitButton_Click(sender As Object, e As EventArgs) Handles submitButton.Click
 
         If addButton.Checked = True Then
-            answer = CInt(num1) + CInt(num2)
+            answer = CInt(num1) + CInt(num2) ' Already integers no need to convert to integer -TJR
 
         ElseIf subtractButton.Checked = True Then
             answer = CInt(num1) - CInt(num2)
@@ -113,8 +113,7 @@ Public Class Form1
             answer = CInt(num1) * CInt(num2)
 
         ElseIf divideButton.Checked = True Then
-            answer = CInt(num1) / CInt(num2
-               )
+            answer = CInt(num1) / CInt(num2)
         End If
 
         Try
@@ -194,25 +193,25 @@ Public Class Form1
 
             End If
 
-        If gradeTextBox.Text = "" Then
-            Accumulatemessage("You must enter grade.", False)
-            gradeTextBox.Focus()
-            problem = False
+            If gradeTextBox.Text = "" Then
+                Accumulatemessage("You must enter grade.", False)
+                gradeTextBox.Focus()
+                problem = False
 
-        ElseIf gradeTextBox.Text > 0 And gradeTextBox.Text < 6 Then
-            controlReset()
+            ElseIf gradeTextBox.Text > 0 And gradeTextBox.Text < 6 Then
+                controlReset()
 
 
-        Else
-            Accumulatemessage("grades 1 to 5 only.", False)
-            gradeTextBox.Focus()
-            problem = False
+            Else
+                Accumulatemessage("grades 1 to 5 only.", False)
+                gradeTextBox.Focus()
+                problem = False
 
-        End If
+            End If
 
         Catch ex As Exception
 
-        MsgBox("Numericals only.")
+            MsgBox("Numericals only.")
 
         End Try
 
@@ -312,4 +311,8 @@ Public Class Form1
 
 End Class
 
+'submit button disabled until all text boxes evaluate ok
+'able to run with empty text boxes
+'summary not working
+'only "add" ever enables
 
