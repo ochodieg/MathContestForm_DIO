@@ -8,7 +8,7 @@ Option Compare Text
 'https://github.com/ochodieg/MathContestForm_DIO
 
 Public Class Form1 'Bad name - TJR
-    Dim num1 As Integer
+    Dim num1 As Integer 'Too many Class/Global variables - TJR
     Dim num2 As Integer
     Dim answer As Integer
     Dim questions As Integer = 0I
